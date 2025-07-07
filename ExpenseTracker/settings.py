@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--p4q203-q&!4_w5xt_%da+)6rkz_up1!9-34erkqc@&-hlv698
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['expense-tracker-1-wmnm.onrender.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'ExpenseTracker.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'sqlite3'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'expense',
+        'USER': 'root',
+        'PASSWORD': 'pory2.arb',
+        'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
 
