@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure--p4q203-q&!4_w5xt_%da+)6rkz_up1!9-34erkqc@&-hlv698
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['expense-tracker-1-wmnm.onrender.com']
+ALLOWED_HOSTS = ['expense-tracker-1-wmnm.onrender.com',
+                 'localhost', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://expense-tracker-1-wmnm.onrender.com']
 
 
 # Application definition
@@ -115,7 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
